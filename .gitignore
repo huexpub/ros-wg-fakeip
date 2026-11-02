@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+data/
+_ref/
+# Python build output only: a bare build/ would also swallow web/build/,
+# which holds the front-end build scripts (those are tracked).
+/build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Front-end（web = 工作台，产物写到 apps/local/static/admin/ 并入库）
+web/node_modules/
+web/dist/
+web/.tsbuild/
+
+# Test scratch data dirs
+.admintest/
+.worktest/
+.authtest/
+
+# 部署密钥（docker compose 的 .env；示例文件 .env.example 需要入库）
+# 只忽略仓库根目录的 .env —— web/.env 是前端构建配置，必须入库
+/.env
+/.env.local
+/.ssh/
+
+wg-easy/*
+.gitea

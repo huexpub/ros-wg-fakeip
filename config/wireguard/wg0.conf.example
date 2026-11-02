@@ -1,0 +1,11 @@
+# Minimal standalone WireGuard server configuration.
+[Interface]
+Address = 10.0.0.1/24
+PrivateKey = REPLACE_WITH_VPS_PRIVATE_KEY
+ListenPort = 51820
+MTU = 1380
+
+# Replace with the RouterOS public key and public endpoint.
+[Peer]
+PublicKey = REPLACE_WITH_ROS_PUBLIC_KEY
+AllowedIPs = 10.0.0.2/32
